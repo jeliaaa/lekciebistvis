@@ -1,0 +1,111 @@
+:root {
+    --ragaccvladi: #919191;
+    --main_padding: 30px;
+}
+
+.responsive_div {
+    background-color: red;
+    height: 600px;
+    width: 600px;
+    padding: var(--main_padding);
+}
+
+@media screen and (max-width:800px) {
+    .responsive_div {
+        background-color: blue;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .responsive_div {
+        background-color: yellow;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+.flex_responsive {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.flex_responsive div {
+    width: 300px;
+    background-color: red;
+    height: 300px;
+}
+
+@media screen and (max-width:1200px) {
+    .flex_responsive {
+        flex-direction: column;
+    }
+
+    .flex_responsive div {
+        width: 80%;
+    }
+}
+
+input:required {
+    border: 3px solid red;
+}
+
+a[target='_blank'] {
+    color: red;
+}
+
+input[type='password'] {
+    border: 1px solid blue;
+    border: 1px solid var(--ragaccvladi);
+}
+
+[title~='ragac'] {
+    color: var(--ragaccvladi)
+}
+
+.maxium_width {
+    width: calc(100vw - 16px);
+    height: 100px;
+    background-color: var(--ragaccvladi);
+    transform: rotate(calc(30deg*3));
+}
+
+.transition_btn {
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    background: rgb(216, 139, 251);
+    background: linear-gradient(90deg, rgba(216, 139, 251, 1) 6%, rgba(145, 209, 254, 1) 50%, rgba(139, 190, 254, 1) 54%, rgba(131, 254, 246, 1) 59%, rgba(118, 204, 254, 1) 67%, rgba(110, 229, 254, 1) 78%, rgba(65, 255, 247, 1) 100%);
+    padding: 10px 15px;
+    width: 300px;
+    transform: rotate(0deg);
+}
+
+.transition_btn:hover {
+    width: 400px;
+    transform: rotate(90deg);
+    background: rgb(251, 182, 139);
+    background: linear-gradient(90deg, rgba(251, 182, 139, 1) 6%, rgba(254, 185, 145, 1) 50%, rgba(254, 231, 139, 1) 54%, rgba(131, 164, 254, 1) 59%, rgba(118, 144, 254, 1) 67%, rgba(180, 110, 254, 1) 78%, rgba(27, 83, 80, 1) 100%);
+    transition: transform 10s ease-in-out;
+}
+
+@keyframes saxeli{
+    0%{
+        background-color: red;
+    }
+    50%{
+        background-color: yellow;
+    }
+    100%{
+        background-color: blue;
+    }
+}
+.animaciistvis{
+    animation: saxeli;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
